@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-body {
+  background-color: #040016;
+  font-family: "Poppins", sans-serif;
+}
+.main-container {
+  padding: 2.9rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 2rem 0; */
+}
+
+.brand {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 2.7rem;
+  margin-left: 10px;
+}
+
+.brand-name {
+  font-weight: 700;
+  margin-left: .1rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.nav-links ul {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  align-items: center;
+  /* margin-right: 4rem; */
+}
+
+#home-link {
+  color: #fbddbb;
+}
+
+#login-link {
+  color: hsl(0, 0%, 87%);
+}
+
+#signup-link {
+  background-color: #e2b887;
+  border-radius: 7px;
+  padding: 0.5rem 2rem;
+  color: #00302e;
+  font-weight: 600;
+}
+.nav-link {
+  list-style: none;
+  margin: 0 1.2rem;
+}
+
+.link-tag {
+  text-decoration: none;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  width: 50%;
+}
+
+.jumbotron {
+  color: #ffffff;
+  font-size: 3rem;
+}
+.jumbotron span {
+  color: #fbddbb;
+}
+.header-img {
+  height: 20rem;
+  margin-right: 6rem;
+}
+
+.jumbotron-subtext {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 14px;
+  padding: 1.5rem 0;
+  padding-right: 7rem;
+}
+
+.download-btns {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.cta-btn img,
+.cta-btn {
+  margin: 0;
+}
+
+.cta-btn img {
+  margin-right: 0.8rem;
+}
+
+/* mainsection */
+.main {
+  position: relative;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 8rem;
+}
+.main-header {
+  color: rgba(255, 255, 255, 0.87);
+  margin-bottom: 1.3rem;
+  font-weight: 700;
+}
+.main-content p {
+  color: rgba(255, 255, 255, 0.83);
+}
+
+.main-subtext {
+  width: 45%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.1;
+}
+/* .meals-container {
+  display: flex;
+  margin: 0;
+  margin-top: 3rem;
+} */
+/* .special-meal {
+  padding: 0 5rem;
+}
+
+.special-meal img {
+  height: 10rem;
+}
+.special-meal h3 {
+  color: rgba(255, 255, 255);
+  margin: .3rem;
+  font-weight: 700;
+}
+
+.special-meal p {
+  font-weight: 100;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 2;
+} */
+
+
+/* MEALS-CONTAINER */
+.meals-container {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 5rem;
+  margin-top: 3.125rem;
+}
+
+.meals-container img {
+  height: 10rem;
+}
+
+.meals-container div {
+  background: #ffffff;
+  color: #0b0d17;
+  padding: 1.25rem;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 10px;
+  transition: background 0.3s, transform 1s;
+}
+
+.meals-container div h3 {
+  margin: .3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #0b0d17;
+}
+
+.meals-container div p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0b0d17;
+}
+
+.meals-container div:hover {
+  background: #fbddbb;
+  transform: translateY(-10px);
+} 
+
+
+/* MAILLIST */
+.mailist-header {
+  color: rgb(251, 221, 187);
+  margin-bottom: 1.5rem;
+}
+
+.mailist-subtext {
+  color: rgba(255, 255, 255, 0.949);
+  font-weight: 400;
+  font-size: 14px;
+  width: 75%;
+}
+
+.mailist-section {
+  display: flex;
+  margin-top: 10rem;
+  align-items: center;
+  padding: 0 4rem;
+  justify-content: space-between;
+}
+.mailist-left {
+  width: 50%;
+}
+
+.email {
+  background: linear-gradient(0deg, #f7f7f7, #f7f7f7);
+  padding: 0.5rem 1.5rem;
+  outline: none;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.email-btn {
+  background: rgba(251, 221, 187, 1);
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: inherit;
+}
+
+.email::placeholder {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+#footer {
+  background-color: #0b0d17;
+  display: flex;
+  flex-direction: column;
+  color: rgb(237, 238, 245);
+  margin-top: 7rem;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-top {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.footer-header {
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 1rem;
+}
+
+li.item {
+  padding: 0.5rem 0;
+  font-weight: 400;
+  color: #eeeff4;
+  font-size: 14px;
+}
+
+ul.items-container {
+  list-style: none;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 50%;
+  padding: 1rem;
+}
+
+.footer-bottom p {
+  color: #d9dbe1;
+  font-size: 14px;
+}
+
+img.soial-icon {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .main-container {
+    padding: 2rem;
+  }
+  .nav-links ul {
+    display: none;
+  }
+
+  nav {
+    height: 10vh;
+  }
+  .brand {
+    gap: 0;
+  }
+  .brand-logo {
+    height: 2rem;
+  }
+  .brand p {
+    font-size: 1.5rem;
+  }
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .header-img {
+    height: 15rem;
+    margin-right: 0;
+  }
+  .header-img-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .header-left {
+    width: 100%;
+    text-align: center;
+  }
+  .jumbotron {
+    font-size: 2rem;
+  }
+  .jumbotron-subtext {
+    display: none;
+  }
+  .main-subtext {
+    width: 100%;
+  }
+  .download-btns {
+    justify-content: center;
+  }
+  /* .meals-container {
+    flex-direction: column;
+  } */
+  .special-meal {
+    padding: 2rem 5rem;
+  }
+  .special-meal h3 {
+    margin: 0.5rem;
+  }
+  .mailist-section {
+    flex-direction: column;
+    margin-top: 5rem;
+    padding: 0;
+
+    align-items: flex-start;
+  }
+  .mailist-left {
+    margin: 2rem 0;
+    width: 100%;
+    padding: 0;
+  }
+  .mailist-subtext {
+    width: 100%;
+  }
+  .footer-bottom{
+    gap: 0;
+    justify-content: space-between;
+  }
+  .socials{
+    display: flex;
+  }
+}

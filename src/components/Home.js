@@ -1,0 +1,178 @@
+import React from "react";
+import appStoreBadge from "../images/AppStoreBadge.svg";
+import googleplayBadge from "../images/GooglePlayBadge.svg";
+import social1 from "../images/Social-Icons.svg";
+import social2 from "../images/Social-Icons-1.svg";
+import social3 from "../images/Social-Icons-2.svg";
+import sneaker from "../images/sneakerlogo.png";
+import shoe from "../images/Sneakerss.png";
+
+import { Link } from "react-router-dom";
+import "../css/Home.css";
+
+const Home = () => {
+  const special_meals = [
+    {
+      meal_name: "Nike Dunk Low",
+      meal_description: "Size 40-45",
+      meal_image: shoe ,
+    },
+    {
+      meal_name: "Nike Dunk Low",
+      meal_description: "Size 40-45",
+      meal_image: shoe ,
+    },
+    {
+      meal_name: "Nike Dunk Low",
+      meal_description: "Size 40-45",
+      meal_image: shoe ,
+    },
+  ];
+  return (
+    <div className="home-body">
+      <div className="main-container">
+        <nav className="navbar">
+          <div className="brand">
+            <img src={sneaker} className="brand-logo" alt="logo" loading="lazy" />
+            <p className="brand-name">QLUXURY</p>
+          </div>
+
+          <div className="nav-links">
+            <ul>
+              <Link to={"/"} className="link-tag">
+                <li className="nav-link" id="home-link">
+                  Home
+                </li>
+              </Link>
+              <Link to={"/login"} className="link-tag">
+                <li className="nav-link" id="login-link">
+                  Login
+                </li>
+              </Link>
+              <Link to={"/signup"} className="link-tag">
+                <li className="nav-link" id="signup-link">
+                  Sign Up
+                </li>
+              </Link>
+            </ul>
+          </div>
+        </nav>
+        {/* header */}
+        <header className="header">
+          <div className="header-left">
+            <h2 className="jumbotron">
+              Order <span>Your </span> Kicks anywhere
+            </h2>
+            <p className="jumbotron-subtext">
+              Browse from our list of sneakers to place your order and have them
+              delivered to you in no time. Affordable, original and sleek!
+            </p>
+            <div className="download-btns">
+              <div className="cta-btn">
+                <img src={googleplayBadge} alt="google-play-badge" />
+              </div>
+              <div className="cta-btn">
+                <img src={appStoreBadge} alt="app-store-badge" />
+              </div>
+            </div>
+          </div>
+          <div className="header-img-container">
+            <img src={sneaker} alt="sneaker" className="header-img" />
+          </div>
+        </header>
+
+        {/* main */}
+        <main>
+          <div className="main-content">
+            <h1 className="main-header">Special Kicks of the day!</h1>
+            <p className="main-subtext">
+              Check our specials of the day and get discounts on all our sneakers, accessories
+              and swift delivery to what ever location within Lagos and Ibadan.
+            </p>
+            <div className="meals-container">
+              {special_meals.map((meal, index) => {
+                return (
+                  <div className="special-meal">
+                    <img src={meal.meal_image} alt="food" loading="lazy" />
+                    <h3>{meal.meal_name}</h3>
+                    <p>{meal.meal_description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mailist-section">
+            <div className="mailist-left">
+              <h2 className="mailist-header">Get notified when we update!</h2>
+              <p className="mailist-subtext">
+                Get notified when we add new items to our specials menu, update
+                our price list of have promos!
+              </p>
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Harlmeen51@gmail.com"
+                className="email"
+              ></input>
+              <button className="email-btn">Get notified</button>
+            </div>
+          </div>
+        </main>
+      </div>
+      <footer id="footer">
+        <div className="footer-top">
+          <div className="footer-item">
+            <h4 className="footer-header">Company</h4>
+            <ul className="items-container">
+              <li className="item">About Us</li>
+              <li className="item">Careers</li>
+              <li className="item">Contact Us</li>
+            </ul>
+          </div>
+
+          <div className="footer-item">
+            <h4 className="footer-header">Support</h4>
+            <ul className="items-container">
+              <li className="item">Help Center</li>
+              <li className="item">Safety Center</li>
+            </ul>
+          </div>
+
+          <div className="footer-item">
+            <h4 className="footer-header">Legal</h4>
+            <ul className="items-container">
+              <li className="item">Cookies Policy</li>
+              <li className="item">Privacy Policy</li>
+              <li className="item">Terms of Service</li>
+              <li className="item">Dispute resolution</li>
+            </ul>
+          </div>
+
+          <div className="footer-item">
+            <h4 className="footer-header">Install</h4>
+            <ul className="items-container">
+              <li className="item">
+                <img src={googleplayBadge} alt="appstorebadge" />
+              </li>
+              <li className="item">
+                <img src={appStoreBadge} alt="playstorebadge" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          <p>© 2021 QLUXURY, All rights reserved</p>
+          <div className="socials">
+            <img src={social1} alt="instagram" className="soial-icon" />
+            <img src={social2} alt="twitter" className="soial-icon" />
+            <img src={social3} alt="youtube" className="soial-icon" />
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Home;
