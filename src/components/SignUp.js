@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.svg";
+import jordan from "../images/jordan.png";
 
 const SignUp = () => {
   return (
@@ -8,8 +8,8 @@ const SignUp = () => {
       <main className="form-page">
         <div className="img-section" id="signup"></div>
         <div className="form-section">
-          <img src={logo} alt="lilies" className="logo" />
-          <h3 className="form-header">Welcome to Lilies!</h3>
+          {/* <img src={jordan} alt="jordan" className="logo" /> */}
+          <h3 className="form-header">Welcome to QLUXURY!</h3>
           <form id="signup__form">
             <input placeholder="Your First Name" />
             <input placeholder="Your Email address" />

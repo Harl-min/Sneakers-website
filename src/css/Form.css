@@ -4,30 +4,24 @@ main.form-page {
   text-transform: inherit;
 }
 
-.img-section#login {
-  height: 100vh;
-  background: linear-gradient(
-      0deg,
-      rgba(226, 184, 135, 0.4),
-      rgba(226, 184, 135, 0.4)
-    ),
-    url(../images/login-img.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 50%;
-}
-
 .img-section#signup {
   height: 100vh;
-  background: linear-gradient(
-      0deg,
-      rgba(226, 184, 135, 0.4),
-      rgba(226, 184, 135, 0.4)
-    ),
-    url(../images/register-img.png);
+  background: url(../images/signuplogo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   width: 50%;
+  padding: auto;
+}
+
+.img-section#login {
+  height: 100vh;
+  background: url(../images/loginlogo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 50%;
+  padding: auto;  
 }
 
 .overlay {
@@ -45,7 +39,7 @@ main.form-page {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 60%;
   padding-top: 5rem;
 }
 #login__form input,
@@ -65,11 +59,22 @@ main.form-page {
   display: none;
 }
 
+.submit-loginbutton {
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  background: #040016;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .submit-button {
   padding: 1.5rem;
   border-radius: 5px;
   border: none;
-  background: #00302e;
+  background: #a51c30;
   color: white;
   text-transform: uppercase;
   font-weight: bold;
@@ -89,7 +94,7 @@ main.form-page {
 
 .form-header {
   margin-bottom: 3rem;
-  color: #00302e;
+  color: #040016;
   font-weight: bold;
   font-size: 27px;
 }
