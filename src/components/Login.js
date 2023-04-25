@@ -1,49 +1,16 @@
 import React, {useState} from 'react'
 import "../css/Form.css"
-import { Link, useNavigate } from "react-router-dom";
-import axios from 'axios';
+import { Link} from "react-router-dom";
 
 
  const Login = (data) => {
-  const navigate = useNavigate();
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    console.log(email, password)
+  }
 
-    const handleSubmit = (event) => {
-      console.log(event.value)
-      event.preventDefault();
-
-
-      // const login = {
-      //   email: enteredEmail,
-      //   password: enteredPassword
-      // }
-
-      // data.onLogin(login);
-      // setEmail('');
-      // setPassword('');
-      navigate("/dashboard");
-    };
-
-    const [enteredEmail, setEmail] = useState('');
-    const [enteredPassword, setPassword] = useState(''); 
-    
-    async function submit(e){
-      e.preventDefault();
-
-      try {
-
-      }
-      catch {
-        
-      }
-    }
-
-    const email = event => {
-      setEmail(event.target.value);
-    }
-
-    const password = event => {
-      setPassword(event.target.value);
-    }
   return (
     <div>
       <main className="form-page">
@@ -51,10 +18,12 @@ import axios from 'axios';
         <div className="form-section">
           {/* <img src={jordan} alt="lilies" className='logo'/> */}
           <h3 className="form-header">Welcome Back!</h3>
-          <form onSubmit={handleSubmit} action="POST" id="login__form">
-            <input placeholder="Your Email address" type="email" onChange={email}/>
-            <input placeholder="Your Password" type="password" onChange={password}/>
-            <button className="submit-loginbutton" type="submit" onClick={submit}>
+          <form onSubmit={handleSubmit}  id="login__form">
+          <input placeholder="Your Email address" type="email" onChange={(e) => setEmail(e.target.value)}
+            value={email}/>
+          <input placeholder="Your Password" type="password"  onChange={(e) => setPassword(e.target.value)}
+            value={password}/>
+             <button className="submit-loginbutton" type="submit">
               Login
             </button>
           </form>

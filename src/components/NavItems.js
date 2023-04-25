@@ -5,9 +5,15 @@ import dashIcon from "../images/grid.png";
 import calenderIcon from "../images/order.svg";
 import userIcon from "../images/profile.svg";
 import cartIcon from "../images/cart.svg";
-import logout from "../images/logout.svg";
 import { useSelector } from "react-redux";
+import { useLogout } from "../hooks/useLogout";
+
 const NavItems = () => {
+  const { logout } = useLogout()
+  const handleClick = () => {
+    logout()
+  }
+
   const cart = useSelector((state) => state.cart.cart);
   return (
     <div className="nav-items">
@@ -55,9 +61,10 @@ const NavItems = () => {
             <p className=" cart-count">{cart.length}</p>
           </span>
         </NavLink>
-        <li id="logout">
-          <img src={logout} alt="logout" />
-        </li>
+
+        <div className="logout">
+        <button onClick={handleClick}>Logout</button>
+        </div>
       </ul>
     </div>
   );
