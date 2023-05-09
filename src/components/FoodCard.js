@@ -24,7 +24,7 @@ function FoodCard(props) {
       <div className="card-top">
         <img src={props.foodImage} alt="food" className="card-img" />
         <p>{props.foodName}</p>
-        <p className="food-description">{props.foodDescription}</p>
+        <p className="shoe-description">{props.foodDescription}</p>
       </div>
       <div className="card-bottom">
         <p>₦ {props.foodPrice}</p>

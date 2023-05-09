@@ -1,5 +1,5 @@
 import sneaker from "../images/Sneakerss.png";
-export const AvailableMeals = [
+export const AvailableShoes = [
   {
     id: "1",
     MealName: "Nike Dunk Low",

@@ -1,12 +1,12 @@
 import "../css/Dashboard.css";
 import profileImage from "../images/profile-img.png"
+import coupon from "../images/coupon.png"
 import FoodCard from "./FoodCard";
 import Sidebar from "./Sidebar";
-import logo from "../images/logo.svg";
 import sneakerlogo from "../images/sneaker.png";
-import { AvailableMeals } from "../Data/data";
+import { AvailableShoes } from "../Data/data";
 import { Outlet } from "react-router-dom";
-
+import Slideshow from "./Slider";
 
 function Dashboard() {
   return (
@@ -28,8 +28,10 @@ function Dashboard() {
             <img src={profileImage} alt="profile-pic" />
           </div>
         </div>
+        <Slideshow />
+        
         <div className="dashboard-main">
-          {AvailableMeals.map((meal) => {
+          {AvailableShoes.map((meal) => {
             return (
               <FoodCard
                 foodName={meal.MealName}

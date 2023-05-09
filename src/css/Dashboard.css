@@ -23,6 +23,39 @@
   text-align: center;
   margin-top: 3rem;
 }
+
+.sales {
+  display: flex;
+  justify-content: space-around;
+  background-color: #EFF5F5;
+  height: 5rem;
+}
+
+.coupon img{
+  height: 35px;
+  width: 35px;
+}
+
+.slideshow {
+  margin: 20px;
+  overflow: hidden;
+  max-width: 100%;
+  height: 5rem;
+  background-color: #00302e;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 2000ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 40px;
+  width: 100%;
+  border-radius: 40px;
+}
+
 /* .card-container {
   border: 0.3px solid rgba(0, 48, 46, 0.1);
   background: rgba(255, 255, 255, 0.83);
@@ -83,7 +116,7 @@
   font-size: 13px;
 }
 
-.food-description {
+.shoes-description {
   color: rgba(0, 0, 0, 0.69);
   font-size: 11px;
   font-weight: 600;

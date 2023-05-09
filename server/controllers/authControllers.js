@@ -61,6 +61,10 @@ const loginUser = async (req, res) => {
       }
 }
 
+const getDashboard = (req, res) => {
+  res.status(200).json({ message: 'Welcome to the dashboard' });
+};
 
 
-module.exports = { loginUser, signupUser}
+
+module.exports = { loginUser, signupUser, getDashboard}

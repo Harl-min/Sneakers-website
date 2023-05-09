@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "./Modal";
 import { useSelector, useDispatch } from "react-redux";
-import { AvailableMeals } from "../Data/data";
+import { AvailableShoes } from "../Data/data";
 import { removeItem } from "../Redux/features/cartSlice";
 import Total from "../utils/Total";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +11,7 @@ const Cart = () => {
   const toggleModal = useSelector((state) => state.modal.IsOpen);
   const cartItems = useSelector((state) => state.cart.cart);
   const getcartItems = cartItems.map((item) =>
-    AvailableMeals.find((meal) => meal.id === item.id)
+    AvailableShoes.find((meal) => meal.id === item.id)
   );
   const dispatch = useDispatch();
 
