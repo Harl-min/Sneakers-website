@@ -1,12 +1,23 @@
 .dashboard-container {
-  display: grid;
-  grid-template-columns: 1fr 6.5fr;
+  display: flex;
+  /* grid-template-columns: 1fr 6.5fr; */
   font-family: "Poppins", sans-serif;
+  background-color: rgb(248, 249, 250);
+}
+
+.test{
+  position: relative;
 }
 
 .dashboard {
   padding: 4rem ;
-  margin-top: -1.5rem;
+  margin-top: 1.5rem;
+}
+
+.dashboard-content {
+  overflow: hidden;
+  width: 100%;
+  margin-left: 224px;
 }
 
 .dashboard-header {
@@ -14,20 +25,52 @@
   justify-content: space-between;
 
 }
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  height: 64px;
+  /* padding: 1rem; */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px); 
+  position: fixed;
+  top: 0;
+  width: 84.5%;
+  opacity: 100;
+  color: #ffff;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
+.toolbar > div {
+  margin: 8px 20px 0px 20px
+}
+
+.toolbar > div > img {
+  height: 40px;
+  width: 40px;
+}
 .dashboard-main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* justify-items: center; */
+  width: 100%;
   gap: 3rem;
   text-align: center;
   margin-top: 3rem;
 }
 
+
 .sales {
   display: flex;
   justify-content: space-around;
   background-color: #EFF5F5;
+  height: 5rem;
+}
+
+.promo {
+  display: flex;
+  justify-content: space-around;
+  background-color: #21004d;
   height: 5rem;
 }
 
@@ -41,7 +84,7 @@
   overflow: hidden;
   max-width: 100%;
   height: 5rem;
-  background-color: #00302e;
+  background-color: rgb(248, 249, 250);
 }
 
 .slideshowSlider {
@@ -65,11 +108,12 @@
 } */
 
 .mui-card {
-  border: 0.3px solid rgba(0, 48, 46, 0.1);
-  background: rgba(255, 255, 255, 0.83);
-  max-width: 210px;
+  /* border: 0.3px solid rgba(0, 48, 46, 0.1); */
+  /* background: rgba(255, 255, 255, 0.83); */
+  /* max-width: 210px; */
   padding: 2rem 0.8rem;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .card-container:hover {
@@ -102,18 +146,21 @@
 }
 
 .card-img {
-  height: 5rem;
+  height: 6rem;
 }
 
 .card-top {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 .card-bottom {
   display: flex;
   justify-content: space-between;
   padding: 0.3rem;
+  font-weight: bolder;
+  /* font-size: 13px; */
   font-weight: 700;
-  font-size: 13px;
+  font-size: 0.925rem;
+  line-height: 1.2;
 }
 
 .shoes-description {
@@ -123,9 +170,11 @@
 }
 
 .addCart-btn {
-  color: #06e775;
-  font-weight: 500;
+  color: #00a753;
   cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 550;
+  line-height: 1.2;
 }
 
 /* cart */

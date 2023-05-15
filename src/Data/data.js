@@ -42,4 +42,18 @@ export const AvailableShoes = [
     MealPrice: 124000.00,
     MealImage: sneaker,
   },
+  {
+    id: "7",
+    MealName: "Nike Dunk Low",
+    MealDescription: "Size 40-44",
+    MealPrice: 65000.00,
+    MealImage: sneaker,
+  },
+  {
+    id: "8",
+    MealName: "Nike Dunk Low",
+    MealDescription: "Size 40-46",
+    MealPrice: 95000.00,
+    MealImage: sneaker,
+  },
 ];

@@ -8,7 +8,7 @@ const Modal = (props) => {
   const navigate = useNavigate();
 
   function handleBackClick() {
-    navigate("/dashboard");
+    navigate("/dashboard/home");
     dispatch(toggleModal);
   }
   return (

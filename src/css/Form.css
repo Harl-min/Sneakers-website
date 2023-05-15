@@ -2,6 +2,7 @@ main.form-page {
   display: flex;
   height: 100vh;
   text-transform: inherit;
+  background-color: rgb(255, 255, 255);
 }
 
 .img-section#signup {
@@ -31,25 +32,27 @@ main.form-page {
 #signup__form {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 .form-section {
   display: flex;
-  align-items: center;
+  /* align-items: right; */
   flex-direction: column;
   justify-content: center;
-  width: 60%;
-  padding-top: 5rem;
+  width: 65%;
+  /* padding: 50px; */
+  /* padding-top: 2rem; */
+  padding: 150px;
 }
 #login__form input,
-#signup__form input {
+#signup__form input,  #login__form .password {
   padding: 1rem;
   margin-bottom: 2rem;
   background: linear-gradient(
       0deg,
-      rgba(251, 221, 187, 0.51),
-      rgba(251, 221, 187, 0.51)
+      rgba(187, 187, 187, 0.51),
+      rgba(185, 185, 184, 0.51)
     ),
     linear-gradient(0deg, rgba(255, 255, 255, 0.83), rgba(255, 255, 255, 0.83));
   border: 1px rgba(251, 221, 187, 0.51);
@@ -60,14 +63,21 @@ main.form-page {
 }
 
 .submit-loginbutton {
-  padding: 1.5rem;
-  border-radius: 5px;
-  border: none;
-  background: rgb(52, 53, 131);;
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0px;
+  border: 0px;
+  margin: 15px 0px 0px;
   cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 3.5rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(99, 102, 241);
+  width: 100%;
+  border-radius: 10px;
 }
 
 .submit-button {
@@ -91,12 +101,21 @@ main.form-page {
   width: 100%;
   justify-content: center;
 }
+.form-header h1 {
+  color: rgba(0, 0, 0, 0.815);
+  margin-bottom: 0.6rem;
+}
+.form-header h4{
+  display: flex;
+  text-align: end;
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.616);
+}
 
-.form-header {
-  margin-bottom: 3rem;
-  color: #040016;
-  font-weight: bold;
-  font-size: 27px;
+.form-header p{
+  margin-left: 10px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 480px) {

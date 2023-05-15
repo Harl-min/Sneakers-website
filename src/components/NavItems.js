@@ -7,6 +7,7 @@ import userIcon from "../images/profile.svg";
 import cartIcon from "../images/cart.svg";
 import { useSelector } from "react-redux";
 import { useLogout } from "../hooks/useLogout";
+import { Link } from "react-router-dom";
 
 const NavItems = () => {
   const { logout } = useLogout()
@@ -20,7 +21,7 @@ const NavItems = () => {
       <ul>
         <NavLink
           className={({ isActive }) => (isActive ? "active " : "nav-item")}
-          to="/dashboard"
+          to="/dashboard/home"
           end
         >
           <span className="sidebar-icon">

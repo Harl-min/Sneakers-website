@@ -19,8 +19,12 @@ const SignUp = () => {
       <main className="form-page">
         <div className="img-section" id="signup"></div>
         <div className="form-section">
-          {/* <img src={jordan} alt="jordan" className="logo" /> */}
-          <h3 className="form-header">Welcome to QLUXURY!</h3>
+        <div className="form-header">
+          <h1>Welcome to QLUXURY!</h1>
+          <h4>Already have an account?<Link to={"/login"}>
+                <p>LOGIN</p>
+              </Link></h4>
+            </div>
           <form id="signup__form" onSubmit={handleSubmit}>
             <input placeholder="Your Email address" type="email" onChange={(e) => setEmail(e.target.value)}
             value={email}/>
@@ -29,15 +33,7 @@ const SignUp = () => {
             <button className="submit-button" type="submit" disabled={isLoading}>SIGN UP</button>
             {error && <div className="error">{error}</div>}
           </form>
-          <div className="form-footer signup__footer">
-            <p>
-              Already have an account?
-              <Link to={"/login"}>
-                <span>LOGIN</span>
-              </Link>
-            </p>
           </div>
-        </div>
       </main>
     </div>
   );

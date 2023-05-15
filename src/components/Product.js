@@ -34,7 +34,7 @@ const Product = (props) => {
       dispatch(addItem({ id, orderAmount, price: product.MealPrice }));
     }
     setOrderAmount(1);
-    navigate("/dashboard");
+    navigate("/dashboard/home");
   }
   return (
     toggleModal && (

@@ -1,12 +1,21 @@
 import "../css/Dashboard.css";
-import profileImage from "../images/profile-img.png"
+import user from "../images/user.png"
 import coupon from "../images/coupon.png"
 import FoodCard from "./FoodCard";
 import Sidebar from "./Sidebar";
 import sneakerlogo from "../images/sneaker.png";
 import { AvailableShoes } from "../Data/data";
 import { Outlet } from "react-router-dom";
-import Slideshow from "./Slider";
+ 
+import {
+  Avatar,
+  Badge,
+  IconButton,
+  SvgIcon,
+  Tooltip,
+} from '@mui/material';
+import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
+
 
 function Dashboard() {
   return (
@@ -17,36 +26,32 @@ function Dashboard() {
           <nav id="sidebar-menu"></nav>
         </button>
       </div>
+      <div className="test">
       <Sidebar />
-      <div className="dashboard">
-        <div className="dashboard-header">
-          <div>
-            <p>Good morning, Harl!</p>
-            <p>What style are you rocking today?</p>
+      </div>
+      <div className="dashboard-content">
+      <div className="toolbar">
+      <Tooltip title="Notifications">
+              <IconButton>
+                <Badge
+                  badgeContent={4}
+                  color="success"
+                  variant="dot"
+                >
+                  <SvgIcon fontSize="small">
+                    <NotificationsNoneOutlinedIcon />
+                  </SvgIcon>
+                </Badge>
+              </IconButton>
+            </Tooltip>
+
+            <div>
+            <img src={user} alt="profile-pic" />
           </div>
-          <div>
-            <img src={profileImage} alt="profile-pic" />
-          </div>
-        </div>
-        <Slideshow />
-        
-        <div className="dashboard-main">
-          {AvailableShoes.map((meal) => {
-            return (
-              <FoodCard
-                foodName={meal.MealName}
-                foodImage={meal.MealImage}
-                foodDescription={meal.MealDescription}
-                foodPrice={meal.MealPrice}
-                key={meal.id.toString()}
-                id={meal.id}
-                meal={meal}
-              />
-            );
-          })}
-        </div>
       </div>
       <Outlet />
+      </div>
+      
     </div>
   );
 }

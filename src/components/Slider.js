@@ -1,8 +1,8 @@
 import React from 'react'
 import coupon from "../images/coupon.png"
 
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-const delay = 6000;
+const colors = ["#0088FE", "#8D00C4", "#FFBB28"];
+const delay = 3000;
 
 function Slideshow() {
   const [index, setIndex] = React.useState(0);
@@ -51,20 +51,20 @@ function Slideshow() {
 
         <div className="promo">
         <div>
-            <p>Black!!!</p>
-            <p>Flash </p>
+            <p>Black Frieeeeeeeeeeeday!!!</p>
+            <p>Flash Sale</p>
           </div>
           <div>
-            <p>Black Friday!!!</p>
+            <p>Black Frwqweweweweweweweiday!!!</p>
             <p>Flash Sale</p>
           </div>
           <div className="coupon">
             <img src={coupon} alt="coupon" />
           </div>
         </div>
-        
       </div>
     </div>
+    
   );
 }
 

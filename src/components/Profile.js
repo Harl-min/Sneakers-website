@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <>
       <div>Profile</div>
-      <Modal></Modal>
+      {/* <Modal></Modal> */}
     </>
   );
 }

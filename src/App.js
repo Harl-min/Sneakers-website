@@ -11,6 +11,7 @@ import Cart from './components/Cart'
 import Product from './components/Product';
 import Checkout from './components/Checkout';
 import Billing from "./components/Billing";
+import DashProducts from './components/DashProducts';
 
 function App() {
   
@@ -24,7 +25,8 @@ function App() {
             <Route path="/signup" exact element={<SignUp />} />
             <Route path="/login" exact element={<Login />} />
             <Route path="/dashboard" exact element={<Dashboard />}>
-              <Route path="product/:id" exact element={<Product />} />
+              <Route path="home/product/:id" exact element={<Product />} />
+              <Route path="home" exact element={<DashProducts />} />
               <Route path="order" exact element={<Order />} />
               <Route path="checkout" exact element={<Checkout />} />
               <Route path="billing" exact element={<Billing />} />

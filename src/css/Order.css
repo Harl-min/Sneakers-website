@@ -1,0 +1,6 @@
+.box {
+    display: block;
+  flex-direction: column; 
+  justify-items: center;
+  padding: 50px;
+}

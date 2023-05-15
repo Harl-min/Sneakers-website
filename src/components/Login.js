@@ -10,22 +10,19 @@ import { Link } from "react-router-dom";
 import { useLogin } from '../hooks/useLogin';
 import { useNavigate } from "react-router-dom";
 
-import {
-  Alert,
-  Box,
-  Button,
-  FormHelperText,
-  Link,
-  Stack,
-  Tab,
-  Tabs,
-  TextField,
-  Typography
-} from '@mui/material';
-/**
- * @param {Object} data - An object containing user data.
- * @return {JSX.Element} A form for the user to log in.
- */
+import Box from '@mui/material/Box';
+// import IconButton from '@mui/material/IconButton';
+// import Input from '@mui/material/Input';
+// import FilledInput from '@mui/material/FilledInput';
+// import OutlinedInput from '@mui/material/OutlinedInput';
+// import InputLabel from '@mui/material/InputLabel';
+// import InputAdornment from '@mui/material/InputAdornment';
+// import FormHelperText from '@mui/material/FormHelperText';
+// import FormControl from '@mui/material/FormControl';
+// import TextField from '@mui/material/TextField';
+// import Visibility from '@mui/icons-material/Visibility';
+// import VisibilityOff from '@mui/icons-material/VisibilityOff';
+
 
 const Login = (data) => {
   const [email, setEmail] = useState('');
@@ -36,23 +33,36 @@ const Login = (data) => {
    * Handle the form submission and log the user in.
    * @param {Event} e - The form submission event.
    */
-  
+  // const [showPassword, setShowPassword] = React.useState(false);
+
+  // const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  // const handleMouseDownPassword = (event) => {
+  //   event.preventDefault();
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await login(email, password);
-      nav('/dashboard');
+      nav('/dashboard/home');
     } catch (err) {
       console.log(error);
     }
   }
 
   return (
+    <Box>
     <div>
       <main className="form-page">
         <div className="img-section" id="login" />
         <div className="form-section">
-          <h3 className="form-header">Welcome Back!</h3>
+          <div className="form-header">
+          <h1>Login</h1>
+          <h4>Don't have an account? <Link to={"/signup"} underline="hover">
+              <p>Register</p>
+            </Link></h4>
+            </div>
           <form onSubmit={handleSubmit} id="login__form">
             <input
               placeholder="Your Email address"
@@ -66,20 +76,44 @@ const Login = (data) => {
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
+            <Link to={"/signup"}>
+            <p>Forgot Password</p>
+            </Link>
+            {/* <FormControl className='password'>
+          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-password"
+            type={showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl> */}
+
             <button disabled={isLoading}  className="submit-loginbutton" type="submit">
               Login
             </button>
             {error && <div className="error">{error}</div>}
           </form>
           <div className="form-footer">
-            <Link to={"/signup"}>
-              <p>Create an account</p>
-            </Link>
-            <p>Forgot Password</p>
+            
+            
+            
           </div>
         </div>
       </main>
     </div>
+    </Box>
   );
 };
 
