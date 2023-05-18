@@ -2,5 +2,10 @@
     display: block;
   flex-direction: column; 
   justify-items: center;
-  padding: 50px;
+  padding: 25px;
+}
+
+.header{
+  font-size: 30px;
+  margin-bottom: -10px;
 }

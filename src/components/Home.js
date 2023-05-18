@@ -6,7 +6,9 @@ import social2 from "../images/Social-Icons-1.svg";
 import social3 from "../images/Social-Icons-2.svg";
 import sneaker from "../images/sneakerlogo.png";
 import shoe from "../images/Sneakerss.png";
-
+import shoe2 from "../images/dunkpro.png";
+import dunk from "../images/greensb.jpg";
+import dunk2 from "../images/dunk4.jpg"
 import { Link } from "react-router-dom";
 import "../css/Home.css";
 
@@ -14,20 +16,68 @@ const Home = () => {
   const special_meals = [
     {
       meal_name: "Nike Dunk Low",
-      meal_description: "Size 40-45",
+      meal_description: "#70,000",
+      meal_price: "#60,000",
       meal_image: shoe ,
     },
     {
       meal_name: "Nike Dunk Low",
-      meal_description: "Size 40-45",
+      meal_description: "#200,000",
+      meal_price: "#190,000",
       meal_image: shoe ,
     },
     {
       meal_name: "Nike Dunk Low",
-      meal_description: "Size 40-45",
+      meal_description: "#120,000",
+      meal_price: "#100,000",
+      meal_image: shoe ,
+    },
+    // {
+    //   meal_name: "Nike Dunk Low",
+    //   meal_description: "#80,000",
+    //   meal_image: shoe ,
+    // }
+  ];
+
+
+  const trending_products = [
+    {
+      meal_name: "Nike Dunk Low",
+      meal_description: "#70,000",
+      meal_image: shoe ,
+    },
+    {
+      meal_name: "Nike Dunk Low",
+      meal_description: "#200,000",
+      meal_image: shoe ,
+    },
+    {
+      meal_name: "Nike Dunk Low",
+      meal_description: "#120,000",
+      meal_image: shoe ,
+    },
+    {
+      meal_name: "Nike Dunk Low",
+      meal_description: "#120,000",
       meal_image: shoe ,
     },
   ];
+
+  const explore_products = [
+    {
+      meal_name: "Nike Jordans",
+      meal_description: "#70,000",
+      meal_image: dunk ,
+    },
+    {
+      meal_name: "Nike Dunks",
+      meal_description: "#200,000",
+      meal_image: dunk2 ,
+    },
+   
+  ];
+
+
   return (
     <div className="home-body">
       <div className="main-container">
@@ -95,14 +145,70 @@ const Home = () => {
                   <div className="special-meal">
                     <img src={meal.meal_image} alt="food" loading="lazy" />
                     <h3>{meal.meal_name}</h3>
+                    <h4>{meal.meal_description}</h4>
+                    <p>{meal.meal_price}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <div className="trending-content">
+            <p className="trending-subtext">Trending Products</p>
+            <div className="trending-container">
+              {trending_products.map((meal, index) => {
+                return (
+                  <div className="trending-meal">
+                    <div className="trending-img">
+                    <img src={meal.meal_image} alt="food" loading="lazy" />
+                    </div>
+                    <div className="trending-title">
+                    <h3>{meal.meal_name}</h3>
                     <p>{meal.meal_description}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            <p className="explore-subtext">More To Explore</p>
+            <div className="explore-container">
+            {explore_products.map((meal, index) => {
+                const mealStyle = {
+                  backgroundImage: `url(${meal.meal_image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundPadding: '50px',
+                  color: 'white',
+                  textAlign: 'center',
+                  padding: '10px',
+                  width: 500,
+                  borderRadius: '5px',
+                  height: 500,
+                  
+                };
+
+                return (
+                  <div className="explore-meal" style={mealStyle}>
+                    <div className="explore-title">
+                      <h3>{meal.meal_name}</h3>
+                      {/* <p>{meal.meal_description}</p> */}
+                      <div className="explore-button">
+                        <p>Shop</p>
+                      </div>
+                    </div>
                   </div>
                 );
               })}
             </div>
           </div>
 
-          <div className="mailist-section">
+          
+
+      <footer id="footer">
+      <div className="mailist-section">
             <div className="mailist-left">
               <h2 className="mailist-header">Get notified when we update!</h2>
               <p className="mailist-subtext">
@@ -110,18 +216,15 @@ const Home = () => {
                 our price list of have promos!
               </p>
             </div>
-            <div>
+            <div className="email-container">
               <input
                 type="text"
-                placeholder="Harlmeen51@gmail.com"
+                placeholder="YourEmail@gmail.com"
                 className="email"
               ></input>
               <button className="email-btn">Get notified</button>
             </div>
           </div>
-        </main>
-      </div>
-      <footer id="footer">
         <div className="footer-top">
           <div className="footer-item">
             <h4 className="footer-header">Company</h4>

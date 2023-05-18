@@ -29,15 +29,7 @@ const NavItems = () => {
           </span>
           <p className="navName">Dashboard</p>
         </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? "active " : "nav-item")}
-          to="/dashboard/profile"
-        >
-          <span className="sidebar-icon">
-            <img src={userIcon} alt="user-icon" />
-          </span>
-          <p className="navName">Your Profile</p>
-        </NavLink>
+        
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "nav-item")}
           to="/dashboard/order"
@@ -57,10 +49,20 @@ const NavItems = () => {
           <span className="sidebar-icon">
             <img src={cartIcon} alt="badge" id="cartIcon" />
           </span>
-          <p className="navName">Your Cart</p>
+          <p className="navName">Cart</p>
           <span className="cart-count-container">
             <p className=" cart-count">{cart.length}</p>
           </span>
+        </NavLink>
+
+        <NavLink
+          className={({ isActive }) => (isActive ? "active " : "nav-item")}
+          to="/dashboard/profile"
+        >
+          <span className="sidebar-icon">
+            <img src={userIcon} alt="user-icon" />
+          </span>
+          <p className="navName">Profile</p>
         </NavLink>
 
         <div className="logout">

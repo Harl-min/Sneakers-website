@@ -1,0 +1,15 @@
+.profile-container {
+    margin-top: 3%;
+    padding: 40px;
+}
+
+
+
+.profile-box {
+    display: flex;
+}
+
+.profile > img {
+    width: 85px;
+    height: 85px;
+}
