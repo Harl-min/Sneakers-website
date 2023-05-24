@@ -322,6 +322,8 @@ nav {
 
 .explore-meal {
   margin-bottom: 5rem;
+  height: 500px;
+  width: 500px;
 }
 
 .explore-title {
@@ -440,12 +442,13 @@ img.soial-icon {
   margin-right: 1rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .main-container {
     padding: 2rem;
   }
   .nav-links ul {
-    display: none;
+    width: 250px;
+    font-size: 12px;
   }
 
   nav {
@@ -498,7 +501,7 @@ img.soial-icon {
 
   .mailist-section {
     flex-direction: column;
-    margin-top: 5rem;
+    margin-top: 1rem;
     padding: 0;
 
     align-items: flex-start;
@@ -585,4 +588,41 @@ img.soial-icon {
     color: #0b0d17;
     margin: .5rem;
   }
+
+  /* Trending Styling */
+  .trending-content {
+    width: 100%;
+  }
+
+  .trending-container {
+    flex-direction: column;
+  }
+
+  .explore-container {
+    flex-direction: column;
+  }
+
+  .explore-meal {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .explore-title {
+    margin-top: 65%;
+  margin-right: 75%;
+  }
+
+  .explore-button p{
+    background-color: #fafafa; /* Green */
+    padding: 4px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
 }

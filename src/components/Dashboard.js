@@ -6,7 +6,6 @@ import Sidebar from "./Sidebar";
 import sneakerlogo from "../images/sneaker.png";
 import { AvailableShoes } from "../Data/data";
 import { Outlet } from "react-router-dom";
- 
 import {
   Avatar,
   Badge,
@@ -44,7 +43,6 @@ function Dashboard() {
                 </Badge>
               </IconButton>
             </Tooltip>
-
             <div>
             <img src={user} alt="profile-pic" />
           </div>

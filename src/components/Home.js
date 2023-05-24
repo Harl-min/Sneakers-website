@@ -184,9 +184,9 @@ const Home = () => {
                   color: 'white',
                   textAlign: 'center',
                   padding: '10px',
-                  width: 500,
+                  // width: 500,
                   borderRadius: '5px',
-                  height: 500,
+                  // height: 500,
                   
                 };
 

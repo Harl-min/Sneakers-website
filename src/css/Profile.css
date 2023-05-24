@@ -13,3 +13,13 @@
     width: 85px;
     height: 85px;
 }
+
+.input {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 2rem 0;
+}
+
+.MuiTextField-root{
+    width: 48%;
+}
