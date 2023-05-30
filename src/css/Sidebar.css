@@ -95,7 +95,7 @@
   
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .brand {
     margin-left: 0;
   }
@@ -113,7 +113,7 @@
     width: 1.5rem;
   }
   .card-container {
-    width: 80%;
+    width: 0%;
     max-width: 350px;
   }
   #logout{
@@ -125,4 +125,4 @@
   .sidebar-container{
     display: none;
   }
-}
+} */

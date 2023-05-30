@@ -1,5 +1,5 @@
 import React from 'react'
-import Modal from './Modal';
+import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import '../css/Profile.css';
 import Avatar from '../images/ninja.png'
@@ -59,17 +59,12 @@ const Profile = () => {
       </Box>
       <Box className='box'  sx={{
           width: '100%',
-          height: 500,
+          height: '50%',
           marginLeft: 5,
           marginTop: 5,
           boxShadow: 3,   
           borderRadius: 4,
           backgroundColor: '#ffffff',
-        '&:hover': {
-          backgroundColor: '#FFFFFF',
-          opacity: [0.9, 0.8, 0.7],
-          
-        },
       }}>
       <div className="profile">
         <h2>Profile</h2>
@@ -98,7 +93,7 @@ const Profile = () => {
           ))}
         </TextField>        
         </div>
-       
+        <Button variant="contained">Save details</Button>
       </div>
       </Box>
       </div>

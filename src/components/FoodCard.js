@@ -19,13 +19,20 @@ function FoodCard(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   // const toggleModal = useSelector((state) => state);
+  
+ 
   return (
     <div className="card-container">
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 1 }}>
-        {Array.from(Array(1)).map((_, index) => (
-          <Grid xs={2} sm={4} md={1} key={index}>
-            <Item>
-              <div className="mui-card" onClick={(e) => {
+    <div className="card-content">
+        <div className="card-top">
+        <img src={props.foodImage} alt="food" className="card-img" />
+      </div>
+      <div className="card-bottom">
+        <h3>{props.foodName}</h3>
+        {/* <p className="shoe-description">{props.foodDescription}</p> */}
+        <h4 >₦ {props.foodPrice}</h4>
+      </div>
+      <p className="addCart-btn" onClick={(e) => {
             dispatch(
               addProduct({
                 id: props.meal.id,
@@ -36,27 +43,14 @@ function FoodCard(props) {
               })
             );
             navigate(`product/${props.id}`);
-          }}>
-             <div className="card-top">
-        <img src={props.foodImage} alt="food" className="card-img" />
-        <p>{props.foodName}</p>
-        <p className="shoe-description">{props.foodDescription}</p>
-      </div>
-      <div className="card-bottom">
-        <p >₦ {props.foodPrice}</p>
-        <p
-          className="addCart-btn"
+          }}
         >
           Add to cart
         </p>
       </div>
-              </div>
-            </Item>
-          </Grid>
-        ))}
-      </Grid>
-    </div>
+        </div>
   );
+ 
 }
 
 export default FoodCard;

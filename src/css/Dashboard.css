@@ -54,7 +54,7 @@
   /* justify-items: center; */
   width: 100%;
   gap: 3rem;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 3rem;
 }
 
@@ -106,19 +106,20 @@
   border-radius: 5px;
 } */
 
-.mui-card {
-  /* border: 0.3px solid rgba(0, 48, 46, 0.1); */
-  /* background: rgba(255, 255, 255, 0.83); */
-  /* max-width: 210px; */
+/* .mui-card {
+  border: 0.3px solid rgba(0, 48, 46, 0.1);
+  background: rgba(255, 255, 255, 0.83);
+  max-width: 210px;
   padding: 2rem 0.8rem;
   border-radius: 5px;
+  background-color: #00eddf;
   cursor: pointer;
-}
+} */
 
-.card-container:hover {
+/* .card-container:hover {
   -webkit-animation: pulse 0.7s ease-out;
           animation: pulse 0.7s ease-out;
-}
+} */
 
 @-webkit-keyframes pulse {
   0% {
@@ -144,22 +145,72 @@
   }
 }
 
-.card-img {
-  height: 6rem;
-}
 
 .card-top {
   padding: 0.5rem;
 }
-.card-bottom {
+/* .card-bottom {
   display: flex;
   justify-content: space-between;
   padding: 0.3rem;
   font-weight: bolder;
-  /* font-size: 13px; */
+  font-size: 13px;
   font-weight: 700;
   font-size: 0.925rem;
   line-height: 1.2;
+} */
+
+/* Trending Styling*/
+.card-container {
+  background-color: rgb(255, 255, 255);
+  /* width: 100%; */
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center;
+  text-align: center; */
+  /* margin: 4rem 0 5rem 0; */
+}
+
+/* .card-container {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2rem;
+  margin-top: 3.125rem;
+} */
+
+.card-container img {
+  height: 9rem;
+  padding: 12px;
+}
+
+.card-top {
+  background-color: #ececec5b;
+  height: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card-bottom{
+  display: flex;
+  flex-direction: column;
+  /* float: left; */
+  margin-top: 10px;
+  /* padding: 0 5px 0 5px; */
+}
+
+.card-bottom h3{
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.card-bottom h4{
+  font-weight: 200;
+  font-size: 15px;
+  margin: 2px 0 2px 0 ;
+  color: #444444;
 }
 
 .shoes-description {
@@ -282,10 +333,10 @@ tr::after {
     width: 100vw;
     justify-content: center;
   }
-  .dashboard {
+  /* .dashboard {
     padding: 11vh 1rem;
     width: 100vw;
-  }
+  } */
 
   .dashboard-header {
     display: none;
@@ -295,6 +346,10 @@ tr::after {
   }
   .dashboard-container {
     grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .test {
+    display: none;
   }
   .navbar-container {
     display: flex;
