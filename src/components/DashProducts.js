@@ -15,7 +15,10 @@ const DashProducts = () => {
           </div>
          
         </div>
+
+        <div className="slide">
         <Slideshow />
+        </div>
         
         <div className="dashboard-main">
           {AvailableShoes.map((meal) => {

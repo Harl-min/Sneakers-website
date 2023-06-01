@@ -1,16 +1,16 @@
 .dashboard-container {
   display: flex;
-  /* grid-template-columns: 1fr 6.5fr; */
   font-family: "Poppins", sans-serif;
 }
 
-.test{
+.test {
   position: relative;
 }
 
 .dashboard {
-  padding: 4rem ;
+  padding: 4rem;
   margin-top: 1.5rem;
+  width: 100%;
 }
 
 .dashboard-content {
@@ -22,15 +22,14 @@
 .dashboard-header {
   display: flex;
   justify-content: space-between;
-
 }
+
 .toolbar {
   display: flex;
   justify-content: flex-end;
   height: 64px;
-  /* padding: 1rem; */
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(8px); 
+  backdrop-filter: blur(8px);
   position: fixed;
   top: 0;
   width: 84.5%;
@@ -41,28 +40,26 @@
 }
 
 .toolbar > div {
-  margin: 8px 20px 0px 20px
+  margin: 8px 20px 0px 20px;
 }
 
 .toolbar > div > img {
   height: 40px;
   width: 40px;
 }
+
 .dashboard-main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  /* justify-items: center; */
+  grid-template-columns: 1fr;
   width: 100%;
-  gap: 3rem;
-  /* text-align: center; */
+  gap: 2rem;
   margin-top: 3rem;
 }
-
 
 .sales {
   display: flex;
   justify-content: space-around;
-  background-color: #EFF5F5;
+  background-color: #eff5f5;
   height: 5rem;
 }
 
@@ -73,7 +70,7 @@
   height: 5rem;
 }
 
-.coupon img{
+.coupon img {
   height: 35px;
   width: 35px;
 }
@@ -98,86 +95,10 @@
   border-radius: 40px;
 }
 
-/* .card-container {
-  border: 0.3px solid rgba(0, 48, 46, 0.1);
-  background: rgba(255, 255, 255, 0.83);
-  max-width: 210px;
-  padding: 2rem 0.8rem;
-  border-radius: 5px;
-} */
-
-/* .mui-card {
-  border: 0.3px solid rgba(0, 48, 46, 0.1);
-  background: rgba(255, 255, 255, 0.83);
-  max-width: 210px;
-  padding: 2rem 0.8rem;
-  border-radius: 5px;
-  background-color: #00eddf;
-  cursor: pointer;
-} */
-
-/* .card-container:hover {
-  -webkit-animation: pulse 0.7s ease-out;
-          animation: pulse 0.7s ease-out;
-} */
-
-@-webkit-keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  40%, 70% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  40%, 70% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-
-.card-top {
-  padding: 0.5rem;
-}
-/* .card-bottom {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.3rem;
-  font-weight: bolder;
-  font-size: 13px;
-  font-weight: 700;
-  font-size: 0.925rem;
-  line-height: 1.2;
-} */
-
-/* Trending Styling*/
 .card-container {
   background-color: rgb(255, 255, 255);
-  /* width: 100%; */
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center;
-  text-align: center; */
-  /* margin: 4rem 0 5rem 0; */
 }
-
-/* .card-container {
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 2rem;
-  margin-top: 3.125rem;
-} */
 
 .card-container img {
   height: 9rem;
@@ -190,26 +111,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.card-bottom{
+.card-bottom {
   display: flex;
   flex-direction: column;
-  /* float: left; */
   margin-top: 10px;
-  /* padding: 0 5px 0 5px; */
 }
 
-.card-bottom h3{
+.card-bottom h3 {
   font-weight: 500;
   font-size: 15px;
 }
 
-.card-bottom h4{
+.card-bottom h4 {
   font-weight: 200;
   font-size: 15px;
-  margin: 2px 0 2px 0 ;
+  margin: 2px 0 2px 0;
   color: #444444;
 }
 
@@ -227,15 +145,14 @@
   line-height: 1.2;
 }
 
-/* cart */
 .empty__cart {
   position: absolute;
   top: 50%;
 }
+
 .cart__container {
   width: 100%;
   height: 100%;
-  /* color: #00302E; */
 }
 
 .cartItem__image {
@@ -328,88 +245,178 @@ tr::after {
   display: none;
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   .modal__content:has(.cart__container) {
     width: 100vw;
     justify-content: center;
   }
-  /* .dashboard {
+  .dashboard {
     padding: 11vh 1rem;
     width: 100vw;
-  } */
-
-  .dashboard-header {
-    display: none;
-  }
-  .dashboard-main {
-    grid-template-columns: 1fr;
-  }
-  .dashboard-container {
-    grid-template-columns: 1fr;
-    width: 100%;
   }
   .test {
     display: none;
   }
-  .navbar-container {
+} */
+
+@media (max-width: 480px) { /* Adjust the breakpoint as needed */
+  .dashboard-container {
     display: flex;
-    height: 10vh;
-    width: 100vw;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    -webkit-box-shadow: 0px 18px 86px -6px rgba(0, 0, 0, 0.11);
-    -moz-box-shadow: 0px 18px 86px -6px rgba(0, 0, 0, 0.11);
-    box-shadow: 0px 18px 86px -6px rgba(0, 0, 0, 0.11);
-    background: rgba(251, 251, 251, 1);
   }
-  #hamburger-menu {
-    display: block;
-  }
-  #hamburger-menu {
-    display: block;
-    position: absolute;
-    right: 0;
-    width: 2rem;
-    height: 1.5rem;
-    display: block;
-    border: none;
-    padding: 10px;
-    margin: 20px;
-    /* background: linear-gradient(
-      to bottom,
-      #00302e,
-      #00302e 20%,
-      white 20%,
-      white 40%,
-      #00302e 40%,
-      #00302e 60%,
-      white 60%,
-      white 80%,
-      #00302e 80%,
-      #00302e 100%
-    ); */
-    background-color: #00eddf;
+  
+  .dashboard {
+    width: 100%;
+    height: 100vh;
+    padding: 0.5em 1em;
   }
 
-  #hamburger-menu #sidebar-menu {
+  .dashboard-main {
+    grid-template-columns: 1fr 1fr;
+  }
+  .navbar-container {
     display: none;
+  }
+  
+  .slide {
+    display: none;
+  }
+  .test {
+    display: none;
+  }
+  
+  .dashboard-content {
+    width: 100%;
     position: fixed;
     top: 0;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    background-color: #3d0e61;
-    padding: 0px 10px;
-    box-sizing: border-box;
+    left: 0;
+    margin: 0;
   }
-  .navbar-container img {
-    margin-left: 2rem;
-    height: 3rem;
+
+  .toolbar {
+    display: flex;
+    height: 64px;
+    background: rgba(131, 37, 37, 0.2);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    color: #fff;
+    padding-left: 14px;
+    padding-right: 5px;
   }
+
+  .toolbar > div > img {
+    height: 22px;
+    width: 22px;
+    margin: 12px 0 0px 0;    
+  }
+
   .card-container {
-    -webkit-box-shadow: 2px 8px 38px -23px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: 2px 8px 38px -23px rgba(0, 0, 0, 0.4);
-    box-shadow: 2px 8px 38px -23px rgba(0, 0, 0, 0.4);
+    background-color: rgb(255, 255, 255);
+    /* width: 100%; */
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center;
+    text-align: center; */
+    /* margin: 4rem 0 5rem 0; */
+  }
+  
+  /* .card-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 2rem;
+    margin-top: 3.125rem;
+  } */
+  
+  .card-container img {
+    height: 5rem;
+    padding: 2px;
+  }
+  
+  .card-top {
+    background-color: #ececec5b;
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .card-bottom{
+    display: flex;
+    flex-direction: column;
+    /* float: left; */
+    margin-top: 10px;
+    /* padding: 0 5px 0 5px; */
   }
 }
+
+/* @media (max-width: 767px) {
+  .test {
+    display: none;
+  }
+
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-content {
+    width: 100%;
+  }
+
+  .toolbar {
+    display: flex;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    color: #fff;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .toolbar > div {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 20px;
+  }
+
+  .toolbar > div > img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .dashboard-content > * {
+    max-width: 100%;
+  }
+} */
+
+@media (min-width: 480px) {
+  .dashboard-main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dashboard-main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
