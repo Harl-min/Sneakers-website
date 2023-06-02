@@ -17,6 +17,7 @@ const NavItems = () => {
 
   const cart = useSelector((state) => state.cart.cart);
   return (
+    <div className="sidebar">
     <div className="nav-items">
       <ul>
         <NavLink
@@ -69,6 +70,7 @@ const NavItems = () => {
         <button onClick={handleClick}>Logout</button>
         </div>
       </ul>
+    </div>
     </div>
   );
 };

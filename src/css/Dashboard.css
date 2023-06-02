@@ -16,7 +16,7 @@
 .dashboard-content {
   overflow: hidden;
   width: 100%;
-  margin-left: 224px;
+  /* margin-left: 224px; */
 }
 
 .dashboard-header {
@@ -101,8 +101,8 @@
 }
 
 .card-container img {
-  height: 9rem;
-  padding: 12px;
+  height: 150px;
+  width: 250px;
 }
 
 .card-top {
@@ -275,7 +275,7 @@ tr::after {
   .dashboard-main {
     grid-template-columns: 1fr 1fr;
   }
-  .navbar-container {
+  /* .navbar-container {
     display: none;
   }
   
@@ -284,7 +284,7 @@ tr::after {
   }
   .test {
     display: none;
-  }
+  } */
   
   .dashboard-content {
     width: 100%;

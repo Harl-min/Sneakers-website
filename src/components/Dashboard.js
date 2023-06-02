@@ -29,7 +29,7 @@ function Dashboard() {
       <Sidebar />
       </div>
       <div className="dashboard-content">
-      <div className="toolbar">
+      {/* <div className="toolbar">
       <Tooltip title="Notifications">
               <IconButton>
                 <Badge
@@ -46,7 +46,7 @@ function Dashboard() {
             <div>
             <img src={user} alt="profile-pic" />
           </div>
-      </div>
+      </div> */}
       <Outlet />
       </div>
       
