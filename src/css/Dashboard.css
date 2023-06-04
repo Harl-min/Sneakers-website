@@ -106,8 +106,9 @@
 }
 
 .card-top {
-  background-color: #ececec5b;
-  height: 13rem;
+  background-color:#F6F6F6;
+  height: 19rem;
+  width: 19rem;
   display: flex;
   justify-content: center;
   align-items: center;

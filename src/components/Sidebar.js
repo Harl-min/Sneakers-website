@@ -1,7 +1,5 @@
 import React from 'react'
 import "../css/Sidebar.css";
-import logo from "../images/logo.svg";
-import sneakerlogo from "../images/sneaker.png";
 import NavItems from './NavItems';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -16,26 +14,13 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import {
   Avatar,
   Badge,
   SvgIcon,
   Tooltip,
 } from '@mui/material';
-import user from "../images/user.png"
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-import { NavLink} from "react-router-dom";
-import homeIcon from "../images/home.svg";
-import dashIcon from "../images/grid.png";
-import calenderIcon from "../images/order.svg";
-import userIcon from "../images/profile.svg";
-import cartIcon from "../images/cart.svg";
 import { useSelector } from "react-redux";
 import { useLogout } from "../hooks/useLogout";
 
@@ -58,7 +43,7 @@ const closedMixin = (theme) => ({
   overflowX: 'hidden',
   width: `calc(${theme.spacing(7)} + 1px)`,
   [theme.breakpoints.up('sm')]: {
-    width: `calc(${theme.spacing(8)} + 1px)`,
+    width: `calc(${theme.spacing(9)} + 1px)`,
   },
 });
 
