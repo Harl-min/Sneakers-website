@@ -3,6 +3,8 @@ import profileImage from "../images/profile-img.png"
 import FoodCard from "./FoodCard";
 import { AvailableShoes } from "../Data/data";
 import Slideshow from "./Slider";
+import ExpandMoreSharpIcon from '@mui/icons-material/ExpandMoreSharp';
+import TuneSharpIcon from '@mui/icons-material/TuneSharp';
 
 const DashProducts = () => {
   return (
@@ -18,6 +20,15 @@ const DashProducts = () => {
 
         <div className="slide">
         <Slideshow />
+        </div>
+
+        <div className="subheader">
+          <p>Men's Shoes</p>
+
+          <div className="filter">
+          <p>Filter </p><TuneSharpIcon></TuneSharpIcon>
+          <p>Sort By </p><ExpandMoreSharpIcon></ExpandMoreSharpIcon>
+          </div>
         </div>
         
         <div className="dashboard-main">
