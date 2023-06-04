@@ -98,6 +98,8 @@
 .card-container {
   background-color: rgb(255, 255, 255);
   display: flex;
+  margin-right: 2rem;
+  
 }
 
 .card-container img {
@@ -108,7 +110,7 @@
 .card-top {
   background-color:#F6F6F6;
   height: 19rem;
-  width: 19rem;
+  width: 120%;
   display: flex;
   justify-content: center;
   align-items: center;

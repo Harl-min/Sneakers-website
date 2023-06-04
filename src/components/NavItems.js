@@ -81,9 +81,7 @@ const NavItems = () => {
           <p className="navName">Profile</p>
         </NavLink>
 
-        <div className="logout">
-        <button onClick={handleClick}>Logout</button>
-        </div>
+        {/* <button className="logout" onClick={handleClick}>Logout</button> */}
       </ul>
     </div>
     </div>
