@@ -7,7 +7,7 @@ main.form-page {
 
 .img-section#signup {
   height: 100vh;
-  background: url(../images/signuplogo.jpg);
+  background: url('https://i.postimg.cc/dtz0g00y/jordanred.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -17,7 +17,7 @@ main.form-page {
 
 .img-section#login {
   height: 100vh;
-  background: url(../images/loginlogo.jpg);
+  background: url('https://i.postimg.cc/15gtWFyS/loginlogo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

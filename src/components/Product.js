@@ -43,10 +43,11 @@ const Product = (props) => {
           <img src={product.MealImage} alt="food" className="modal-img" />
           <h3 className="order-name">{product.MealName}</h3>
           <p className="order-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            malesuada convallis arcu vel eleifend. Vivamus est justo, aliquet
-            non consectetur eget, eleifend vitae ipsum. Donec et dolor rutrum,
-            pellentesque ligula at, porta leo. Phasellus at lacus eget ex
+            A springy ride for every run, the Peg's familiar, just-for-you feel
+            returns to help you accomplish your goals. This milestone version
+            has the same responsiveness you love, but with better comfort in
+            those sensitive areas of your foot, like the arch and toes.
+            
           </p>
           <div className="order-details-conatiner">
             <h4>N{product.MealPrice}</h4>

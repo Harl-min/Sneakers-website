@@ -282,20 +282,20 @@ tr::after {
 } */
 
 @media (max-width: 480px) { /* Adjust the breakpoint as needed */
-  .dashboard-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+   .dashboard-container {
+    padding: 0;
+   
   }
   
   .dashboard {
     width: 100%;
-    height: 100vh;
-    padding: 0.5em 1em;
-  }
+    padding: 3rem 1rem 1rem 1rem;    
+  } 
 
   .dashboard-main {
     grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 0;
   }
   /* .navbar-container {
     display: none;
@@ -310,10 +310,13 @@ tr::after {
   
   .dashboard-content {
     width: 100%;
-    position: fixed;
     top: 0;
     left: 0;
     margin: 0;
+  }
+
+  .drawer {
+    display: none;
   }
 
   .toolbar {
@@ -336,24 +339,14 @@ tr::after {
     width: 22px;
     margin: 12px 0 0px 0;    
   }
-
+  
   .card-container {
     background-color: rgb(255, 255, 255);
-    /* width: 100%; */
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center;
-    text-align: center; */
-    /* margin: 4rem 0 5rem 0; */
+    /* grid-gap: 2rem; */
+    margin-top: 1.125rem;
+    width: 200%;
   }
-  
-  /* .card-container {
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 2rem;
-    margin-top: 3.125rem;
-  } */
   
   .card-container img {
     height: 5rem;
@@ -363,6 +356,7 @@ tr::after {
   .card-top {
     background-color: #ececec5b;
     height: 9rem;
+    width: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
