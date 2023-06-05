@@ -294,8 +294,7 @@ tr::after {
 
   .dashboard-main {
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    margin: 0;
+
   }
   /* .navbar-container {
     display: none;
@@ -341,26 +340,27 @@ tr::after {
   }
   
   .card-container {
-    background-color: rgb(255, 255, 255);
     display: flex;
     /* grid-gap: 2rem; */
     margin-top: 1.125rem;
-    width: 200%;
+    width: 100%;
   }
   
   .card-container img {
-    height: 5rem;
-    padding: 2px;
+    height: 7rem;
+  }
+
+  .card-content{
+    margin: 0 -9rem 0 0rem;
   }
   
   .card-top {
     background-color: #ececec5b;
-    height: 9rem;
-    width: 9rem;
+    height: 10rem;
+    width: 11.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-  
   }
   
   .card-bottom{
