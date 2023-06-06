@@ -294,7 +294,7 @@ tr::after {
 
   .dashboard-main {
     grid-template-columns: 1fr 1fr;
-
+    margin-left: -1%;
   }
   /* .navbar-container {
     display: none;
@@ -427,6 +427,15 @@ tr::after {
 @media (min-width: 768px) {
   .dashboard-main {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card-top {
+    background-color: #ececec5b;
+    height: 10rem;
+    width: 10.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
