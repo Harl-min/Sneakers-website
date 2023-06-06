@@ -27,6 +27,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import sneakerlogo from "../images/sneaker.png";
 
+
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -36,6 +37,9 @@ const openedMixin = (theme) => ({
     duration: theme.transitions.duration.enteringScreen,
   }),
   overflowX: 'hidden',
+  [theme.breakpoints.down('sm')]: {
+    width: '75px' // Hide the drawer on mobile view
+  },
 });
 
 const closedMixin = (theme) => ({
@@ -44,11 +48,12 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: 'hidden',
-  width: `calc(${theme.spacing(7)} + 1px)`,
+  width: `calc(${theme.spacing(0)} + 1px)`,
   [theme.breakpoints.up('sm')]: {
     width: `calc(${theme.spacing(9)} + 1px)`,
   },
 });
+
 
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -74,6 +79,9 @@ const AppBar = styled(MuiAppBar, {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    [theme.breakpoints.down('sm')]: {
+      width: `calc(100% - ${75}px)`, // Hide the drawer on mobile view
+    },
   }),
 }));
 
@@ -128,7 +136,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      width: '12ch',
+      width: '10ch',
       '&:focus': {
         width: '20ch',
       },
@@ -165,22 +173,22 @@ export default function MiniDrawer() {
             onClick={handleDrawerOpen}
             edge="start"
             sx={{
-              marginRight: 5,
+              marginRight: '2%',
               ...(open && { display: 'none' }),
             }}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1, display: 'flex' }}>
-            <img className='toolbarimage' src={sneakerlogo} alt='lilies'/><p>QLUXURY </p>
+            <img className='toolbarimage' src={sneakerlogo} alt='lilies'/><p className='tab-title'>QLUXURY </p>
           </Typography>
-          <Search sx={{backgroundColor: '#F6F6F6', color: 'black', borderRadius: '15px'}}>
+          <Search sx={{backgroundColor: '#F6F6F6', color: 'black', borderRadius: '15px', width: '20%'}}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
               placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
+              inputProps={{ 'aria-label': 'search' }} 
             />
           </Search>
           <IconButton>
@@ -196,7 +204,7 @@ export default function MiniDrawer() {
               </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer className='drawer' variant="permanent" open={open}>
+      <Drawer className='drawer' variant="permanent" open={open} sx={{}}>
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}

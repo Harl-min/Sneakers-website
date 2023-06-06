@@ -296,6 +296,42 @@ tr::after {
     grid-template-columns: 1fr 1fr;
     margin-left: -1%;
   }
+
+  .tab-title {
+    font-size: 16px;
+    display: none;
+  }
+
+  .toolbarimage {
+    width: 1px;
+  }
+
+  .subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0 -1.5rem 0;
+    /* background-color: rgb(77, 2, 2); */
+  }
+  
+  .subheader > p {
+    font-size: 1.2rem;
+    color: #040016;
+    font-weight: 500;
+  }
+
+  .filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+  
+  .filter > p{
+    margin: 0 2px 0 1rem;
+    color: #040016;
+    font-weight: 200;
+  }
   /* .navbar-container {
     display: none;
   }
@@ -315,7 +351,8 @@ tr::after {
   }
 
   .drawer {
-    display: none;
+    /* display: none; */
+    /* width: 15rem; */
   }
 
   .toolbar {
@@ -348,6 +385,7 @@ tr::after {
   
   .card-container img {
     height: 7rem;
+    width: 100%;
   }
 
   .card-content{
