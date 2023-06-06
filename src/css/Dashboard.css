@@ -128,7 +128,7 @@
 .card-top {
   background-color:#F6F6F6;
   height: 19rem;
-  width: 120%;
+  width: 120%;            
   display: flex;
   justify-content: center;
   align-items: center;
@@ -469,8 +469,8 @@ tr::after {
 
   .card-top {
     background-color: #ececec5b;
-    height: 10rem;
-    width: 10.5rem;
+    /* height: 10rem; */
+    /* width: 10.5rem; */
     display: flex;
     justify-content: center;
     align-items: center;
