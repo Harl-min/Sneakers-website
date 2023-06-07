@@ -1,20 +1,7 @@
 import "../css/Dashboard.css";
-import user from "../images/user.png"
-import coupon from "../images/coupon.png"
-import FoodCard from "./FoodCard";
 import Sidebar from "./Sidebar";
 import sneakerlogo from "../images/sneaker.png";
-import { AvailableShoes } from "../Data/data";
 import { Outlet } from "react-router-dom";
-import {
-  Avatar,
-  Badge,
-  IconButton,
-  SvgIcon,
-  Tooltip,
-} from '@mui/material';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
-
 
 function Dashboard() {
   return (

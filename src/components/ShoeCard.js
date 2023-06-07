@@ -1,11 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../Redux/features/productSlice";
-import Card from '@mui/material/Card';
 import { experimentalStyled as styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#EEEEEE85',
@@ -15,7 +12,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-function FoodCard(props) {
+function ShoeCard(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   // const toggleModal = useSelector((state) => state);
@@ -25,21 +22,21 @@ function FoodCard(props) {
     <div className="card-container">
     <div className="card-content">
         <div className="card-top">
-        <img src={props.foodImage} alt="food" className="card-img" />
+        <img src={props.shoeImage} alt="shoe" className="card-img" />
       </div>
       <div className="card-bottom">
-        <h3>{props.foodName}</h3>
-        {/* <p className="shoe-description">{props.foodDescription}</p> */}
-        <h4 >₦ {props.foodPrice}</h4>
+        <h3>{props.shoeName}</h3>
+        {/* <p className="shoe-description">{props.shoeDescription}</p> */}
+        <h4 >₦ {props.shoePrice}</h4>
       </div>
       <p className="addCart-btn" onClick={(e) => {
             dispatch(
               addProduct({
                 id: props.meal.id,
-                MealName: props.meal.MealName,
-                MealDescription: props.meal.MealDescription,
-                MealPrice: props.meal.MealPrice,
-                MealImage: props.meal.MealImage,
+                ShoeName: props.meal.ShoeName,
+                ShoeDescription: props.meal.ShoeDescription,
+                ShoePrice: props.meal.ShoePrice,
+                ShoeImage: props.meal.ShoeImage,
               })
             );
             navigate(`product/${props.id}`);
@@ -53,4 +50,4 @@ function FoodCard(props) {
  
 }
 
-export default FoodCard;
+export default ShoeCard;

@@ -6,7 +6,6 @@ import social2 from "../images/Social-Icons-1.svg";
 import social3 from "../images/Social-Icons-2.svg";
 import sneaker from "../images/sneakerlogo.png";
 import shoe from "../images/Sneakerss.png";
-import shoe2 from "../images/dunkpro.png";
 import dunk from "../images/greensb.jpg";
 import dunk2 from "../images/dunk4.jpg"
 import { Link } from "react-router-dom";
@@ -143,7 +142,7 @@ const Home = () => {
               {special_meals.map((meal, index) => {
                 return (
                   <div className="special-meal">
-                    <img src={meal.meal_image} alt="food" loading="lazy" />
+                    <img src={meal.meal_image} alt="shoe" loading="lazy" />
                     <h3>{meal.meal_name}</h3>
                     <h4>{meal.meal_description}</h4>
                     <p>{meal.meal_price}</p>
@@ -162,7 +161,7 @@ const Home = () => {
                 return (
                   <div className="trending-meal">
                     <div className="trending-img">
-                    <img src={meal.meal_image} alt="food" loading="lazy" />
+                    <img src={meal.meal_image} alt="shoe" loading="lazy" />
                     </div>
                     <div className="trending-title">
                     <h3>{meal.meal_name}</h3>

@@ -39,11 +39,11 @@ const Cart = () => {
                         <td className="removeItem__container">
                           <img
                             className="cartItem__image"
-                            alt={MealName}
-                            src={MealImage}
+                            alt={ShoeName}
+                            src={ShoeImage}
                           />
                           <div>
-                            <p className="cartItem__name">{MealName}</p>
+                            <p className="cartItem__name">{ShoeName}</p>
                             <p
                               className="remove__item"
                               onClick={() => dispatch(removeItem(id))}
@@ -61,13 +61,13 @@ const Cart = () => {
                           </p>
                         </td>
                         <td>
-                          <p>₦ {MealPrice}</p>
+                          <p>₦ {ShoePrice}</p>
                         </td>
                         <td>
                           <p>
                             ₦
                             {Number(
-                              MealPrice *
+                              ShoePrice *
                                 cartItems.find((meal) => meal.id === id)
                                   .orderAmount
                             )}

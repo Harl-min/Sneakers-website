@@ -29,9 +29,9 @@ const Product = (props) => {
   function addToCart() {
     const prevOrdered = cartItems.find((meal) => meal.id === product.id);
     if (prevOrdered !== undefined) {
-      dispatch(updateItem({ id, orderAmount, price: product.MealPrice }));
+      dispatch(updateItem({ id, orderAmount, price: product.ShoePrice }));
     } else {
-      dispatch(addItem({ id, orderAmount, price: product.MealPrice }));
+      dispatch(addItem({ id, orderAmount, price: product.ShoePrice }));
     }
     setOrderAmount(1);
     navigate("/dashboard/home");
@@ -40,8 +40,8 @@ const Product = (props) => {
     toggleModal && (
       <Modal>
         <div className="modal__content">
-          <img src={product.MealImage} alt="food" className="modal-img" />
-          <h3 className="order-name">{product.MealName}</h3>
+          <img src={product.ShoeImage} alt="shoe" className="modal-img" />
+          <h3 className="order-name">{product.ShoeName}</h3>
           <p className="order-description">
             A springy ride for every run, the Peg's familiar, just-for-you feel
             returns to help you accomplish your goals. This milestone version
@@ -50,8 +50,8 @@ const Product = (props) => {
             
           </p>
           <div className="order-details-conatiner">
-            <h4>N{product.MealPrice}</h4>
-            <h4>{product.MealDescription}</h4>
+            <h4>N{product.ShoePrice}</h4>
+            <h4>{product.ShoeDescription}</h4>
             <h4>Available</h4>
           </div>
 

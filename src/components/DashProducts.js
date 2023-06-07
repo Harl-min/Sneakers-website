@@ -1,6 +1,5 @@
 import React from 'react'
-import profileImage from "../images/profile-img.png"
-import FoodCard from "./FoodCard";
+import ShoeCard from "./ShoeCard";
 import { AvailableShoes } from "../Data/data";
 import Slideshow from "./Slider";
 import ExpandMoreSharpIcon from '@mui/icons-material/ExpandMoreSharp';
@@ -34,11 +33,11 @@ const DashProducts = () => {
         <div className="dashboard-main">
           {AvailableShoes.map((meal) => {
             return (
-              <FoodCard className="foodcard"
-                foodName={meal.MealName}
-                foodImage={meal.MealImage}
-                foodDescription={meal.MealDescription}
-                foodPrice={meal.MealPrice}
+              <ShoeCard className="Shoecard"
+                shoeName={meal.ShoeName}
+                shoeImage={meal.ShoeImage}
+                shoeDescription={meal.ShoeDescription}
+                shoePrice={meal.ShoePrice}
                 key={meal.id.toString()}
                 id={meal.id}
                 meal={meal}
