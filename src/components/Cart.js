@@ -34,7 +34,7 @@ const Cart = () => {
                 </thead>
                 <tbody>
                   {getcartItems.map(
-                    ({ id, MealPrice, MealImage, MealName }) => (
+                    ({ id, ShoePrice, ShoeImage, ShoeName }) => (
                       <tr key={id}>
                         <td className="removeItem__container">
                           <img

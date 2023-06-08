@@ -31,7 +31,7 @@ useEffect(() => {
   }, 4000);
 
   return () => clearInterval(intervalId);
-}, []);
+});
 
 // Render the current slide
 return (
