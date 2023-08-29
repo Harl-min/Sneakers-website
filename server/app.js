@@ -3,6 +3,7 @@ const mongoose = require('mongoose'); //Used to communicate with mongodb
 const app = express();
 const authRoutes = require('./routes/authRoutes');
 const cors = require('cors');
+const multer = require( 'multer');
 
 //Middleware & Static files
 app.use(express.json());
@@ -18,9 +19,19 @@ app.set('view engine', 'js')
 //connect to mongoDb
 const dbURI = 'mongodb+srv://harl:SCRAM@sneakers-website.ewtozh0.mongodb.net/sneaker';
 mongoose.connect(dbURI)
-.then((result) => app.listen(4000))//listen to request after connection is complete
+.then((result) => app.listen(4000), console.log("Connected successfully"))//listen to request after connection is complete
 .catch((err) => console.log(err));
 
+const storage = multer.diskStorage({
+  destination:(req,file,cb) => {
+    cb(null, 'uploads')
+  },
+  filename:(req,file,cb) => {
+    cb(null, file.originalname)
+  }
+})
+
+const upload = multer({storage:storage})
 //routes
 // app.get('/Sneakers-website', (req, res) => {
 //     res.sendFile('Sneakers-website/build/index.html');
