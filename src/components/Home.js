@@ -265,7 +265,7 @@ const Home = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>© 2021 QLUXURY, All rights reserved</p>
+          <p>© 2023 QLUXURY, All rights reserved</p>
           <div className="socials">
             <img src={social1} alt="instagram" className="soial-icon" />
             <img src={social2} alt="twitter" className="soial-icon" />

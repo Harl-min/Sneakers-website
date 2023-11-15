@@ -62,6 +62,17 @@ main.form-page {
   display: none;
 }
 
+.forgotpassword {
+  text-decoration: none;
+  text-align: right;
+  margin-top: -1rem;
+}
+
+.error {
+  font-size: 14px;
+  color: red;
+}
+
 .submit-loginbutton {
   display: inline-flex;
   align-items: center;

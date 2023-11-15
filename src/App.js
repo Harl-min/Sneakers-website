@@ -12,6 +12,7 @@ import Product from './components/Product';
 import Checkout from './components/Checkout';
 import Billing from "./components/Billing";
 import DashProducts from './components/DashProducts';
+import ChangePassword from './components/ChangePassword';
 
 function App() {
   
@@ -32,6 +33,8 @@ function App() {
               <Route path="billing" exact element={<Billing />} />
               <Route path="profile" exact element={<Profile />} />
               <Route path="cart" exact element={<Cart />} />
+              <Route path="changepassword" exact element={<ChangePassword />} />
+
             </Route>
           </Routes>
         </Router>
