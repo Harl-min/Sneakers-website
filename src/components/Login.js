@@ -21,7 +21,7 @@ const Login = (data) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const {login, isLoading, error } = useLogin();
-  // const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const nav = useNavigate();
   /**
    * Handle the form submission and log the user in.
@@ -30,17 +30,16 @@ const Login = (data) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !password) {
-      // setErrorMessage('Please enter both email and password.');
+      setErrorMessage('Please enter both email and password.');
       return;
     }
     try {
       const loginResult = await login(email, password);
-      if (!loginResult.error) {
-        // Login successful, navigate to the dashboard page
+      if (loginResult.status === 200) {
         nav('/dashboard/home');
       } else {
         // Handle login error without navigation
-        error(loginResult.error);
+        setErrorMessage(loginResult.message);
       }
     } catch (err) {
       console.log(err);
@@ -99,7 +98,7 @@ const Login = (data) => {
             <button disabled={isLoading}  className="submit-loginbutton" type="submit">
               Login
             </button>
-            {error && <div className="error">{error}</div>}
+            {error && <div className="error">{setErrorMessage}</div>}
           </form>
           <div className="form-footer">
             

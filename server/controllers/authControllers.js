@@ -1,17 +1,3 @@
-// module.exports.signup_get = (req, res) => {
-//     res.render('signup');
-// }
-
-// module.exports.login_get = (req, res) => {
-//     res.render('login');
-// }
-
-// // //signup user
-// // // module.exports.signup_post = (req, res) => {
-// // //     res.render('new signup');
-// // // }
-
-
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
@@ -54,9 +40,9 @@ const loginUser = async (req, res) => {
     
         //create token
         const token = createToken(user.id)
-        res.status(200).json({ email, token })
+        res.status(200).json({ status: 200, message: 'Success', email, token });
       } catch (err) {
-        res.status(400).json({ message: err.message })
+        res.status(400).json({ status: 400, message: err.message });
       }
 }
 
