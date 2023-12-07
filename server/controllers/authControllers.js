@@ -22,7 +22,7 @@ const jwt = require('jsonwebtoken')
 const secret = 'ewjjjjrhsrohiweqejmtrertrettmhvd';
 
 const createToken = (id) => {
-    return jwt.sign({id}, secret, { expiresIn: '3d'})
+    return jwt.sign({id}, secret, { expiresIn: '100d'})
 }
 // Parse JSON request bodies
 app.use(bodyParser.json())
@@ -34,8 +34,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // Example route
 const signupUser = async (req, res) => {
   const { email, password } = req.body
-console.log('email:', email);
-console.log('password:', password);
+console.log('details:', email, password);
   try {
     const user = await User.signup(email, password)
 

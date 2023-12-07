@@ -2,7 +2,8 @@ const requireAuth = async (req, res, next) => {
   const jwt = require('jsonwebtoken');
   const User = require('../models/userModel');
 
-  if (req.path === '/login') { // Skip check on login page
+  // eslint-disable-next-line no-sequences
+  if (req.path === '/signup', '/login') { // Skip check on login page
     return next();
   }
 

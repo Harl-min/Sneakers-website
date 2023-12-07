@@ -1,15 +1,8 @@
-/**
- * This component represents the Login form.
- * It allows the user to input their email and password
- * and submit the form to log in to their account.
- */
-
 import React, { useState } from 'react';
 import "../css/Form.css";
 import { Link } from "react-router-dom";
 import { useLogin } from '../hooks/useLogin';
 import { useNavigate } from "react-router-dom";
-
 import Box from '@mui/material/Box';
 // import IconButton from '@mui/material/IconButton';
 // import Input from '@mui/material/Input';
@@ -34,21 +27,12 @@ const Login = (data) => {
    * Handle the form submission and log the user in.
    * @param {Event} e - The form submission event.
    */
-  // const [showPassword, setShowPassword] = React.useState(false);
-
-  // const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  // const handleMouseDownPassword = (event) => {
-  //   event.preventDefault();
-  // };
- 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !password) {
       // setErrorMessage('Please enter both email and password.');
       return;
     }
-  
     try {
       const loginResult = await login(email, password);
       if (!loginResult.error) {
@@ -56,7 +40,7 @@ const Login = (data) => {
         nav('/dashboard/home');
       } else {
         // Handle login error without navigation
-        // setErrorMessage(loginResult.error);
+        error(loginResult.error);
       }
     } catch (err) {
       console.log(err);
