@@ -1,35 +1,44 @@
-import { createContext, useReducer, useEffect } from 'react'
-export const AuthContext = createContext()
+import { createContext, useReducer, useEffect, useRef } from 'react';
+
+export const AuthContext = createContext();
 
 export const authReducer = (state, action) => {
-    switch (action.type) {
-        case 'LOGIN':
-            return {user: action.payload}
-        case 'LOGOUT':
-            return {user: null}
-            default:
-                return state
-    }
-}
+  switch (action.type) {
+    case 'LOGIN':
+      return { user: action.payload };
+    case 'LOGOUT':
+      return { user: null };
+    default:
+      return state;
+  }
+};
 
 export const AuthContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(authReducer, {
-        user: null
-    })
+  const [state, dispatch] = useReducer(authReducer, {
+    user: null,
+  });
 
-    useEffect(() => {
-        const user = JSON.parse(localStorage.getItem('user'))
+  const prevAuthState = useRef(state);
 
-        if (user) {
-            dispatch({ type: 'LOGIN', payload: user})
-        }
-    }, [])
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('user'));
 
-    console.log('Auth state:', state)
+    if (user) {
+      dispatch({ type: 'LOGIN', payload: user });
+    }
+  }, []);
 
-    return (
-        <AuthContext.Provider value={{...state, dispatch}}>
-            {children}
-        </AuthContext.Provider>
-    )
-}
+  useEffect(() => {
+    // Log the state only if it has changed
+    if (prevAuthState.current !== state) {
+      console.log('Auth state:', state);
+      prevAuthState.current = state;
+    }
+  }, [state]);
+
+  return (
+    <AuthContext.Provider value={{ ...state, dispatch }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};

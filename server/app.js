@@ -8,7 +8,7 @@ const multer = require( 'multer');
 //Middleware & Static files
 app.use(express.json());
 app.use(cors({ // add cors middleware
-  origin: 'http://localhost:3000', // set allowed origin
+  origin: 'http://localhost:3001', // set allowed origin
   credentials: true // allow credentials (e.g. cookies)
 }));
 
