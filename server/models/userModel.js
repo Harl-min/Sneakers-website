@@ -41,7 +41,7 @@ userSchema.statics.signup = async function (email, password) {
     return user 
 }
 
-//static llogin method
+//static login method
 
 userSchema.statics.login = async function (email, password) {
     if (!email || !password) {
@@ -59,6 +59,12 @@ userSchema.statics.login = async function (email, password) {
     }
     return user
 
+}
+
+userSchema.statics.forgotpassword = async function (email) {
+    if (!email) {
+        throw Error('Field must be filled')
+    }
 }
 
 module.exports = mongoose.model('User', userSchema)

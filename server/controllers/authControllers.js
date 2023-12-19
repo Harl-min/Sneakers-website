@@ -46,10 +46,22 @@ const loginUser = async (req, res) => {
       }
 }
 
+const forgotPassword = async (req, res) => {
+  const { email } = req.body
+  try {
+      const user = await User.forgotpassword(email)
+      //create token3
+      const token = createToken(user.id)
+      res.status(200).json({ status: 200, message: 'Success', email, token });
+    } catch (err) {
+      res.status(400).json({ status: 400, message: err.message });
+    }
+}
+
 const getDashboard = (req, res) => {
   res.status(200).json({ message: 'Welcome to the dashboard' });
 };
 
 
 
-module.exports = { loginUser, signupUser, getDashboard}
+module.exports = { loginUser, signupUser, getDashboard, forgotPassword}

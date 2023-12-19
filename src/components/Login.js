@@ -78,7 +78,7 @@ const Login = (data) => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
               />
-              <Link className="forgotpassword" to={"/changepassword"}>
+              <Link className="forgotpassword" to={"/forgotpassword"}>
                 <p>Forgot Password?</p>
               </Link>
               <button
