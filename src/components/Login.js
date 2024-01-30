@@ -4,17 +4,7 @@ import { Link } from "react-router-dom";
 import { useLogin } from "../hooks/useLogin";
 import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
-// import IconButton from '@mui/material/IconButton';
-// import Input from '@mui/material/Input';
-// import FilledInput from '@mui/material/FilledInput';
-// import OutlinedInput from '@mui/material/OutlinedInput';
-// import InputLabel from '@mui/material/InputLabel';
-// import InputAdornment from '@mui/material/InputAdornment';
-// import FormHelperText from '@mui/material/FormHelperText';
-// import FormControl from '@mui/material/FormControl';
-// import TextField from '@mui/material/TextField';
-// import Visibility from '@mui/icons-material/Visibility';
-// import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { Button } from "../reusablecomponents/Button/Index";
 
 const Login = (data) => {
   const [error, setError] = useState(false);
@@ -40,7 +30,7 @@ const Login = (data) => {
         console.log("Before navigation");
         nav("/dashboard/home");
         console.log("After navigation");
-        setError(false); // Reset error state on successful login
+        setError(false);
       } else {
         setError(true);
         setErrorMessage(response.message);
@@ -81,14 +71,12 @@ const Login = (data) => {
               <Link className="forgotpassword" to={"/forgotpassword"}>
                 <p>Forgot Password?</p>
               </Link>
-              <button
-                disabled={isLoading}
-                className="submit-loginbutton"
-                type="submit"
-              >
-                Login
-              </button>
-              {error && <div className="error">{errorMessage}</div>}
+              <Button 
+               title={'LOG IN'}
+               handleSubmit={handleSubmit}
+               loading={isLoading}
+               error={error}
+              />
             </form>
             <div className="form-footer"></div>
           </div>

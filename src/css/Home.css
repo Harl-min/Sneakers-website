@@ -21,6 +21,10 @@ nav {
 .brand {
   margin: 0;
   display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  display: flex;
   align-items: center;
 }
 
@@ -446,16 +450,23 @@ img.soial-icon {
   .main-container {
     padding: 2rem;
   }
-  .nav-links ul {
-    width: 250px;
-    font-size: 12px;
+  .nav-links {
+    display: none;
   }
-
+  .menu-button{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 170px;
+    color: #fff;
+    font-size: 25px;
+  }
   nav {
     height: 10vh;
   }
   .brand {
     gap: 0;
+    display: flex;
+    justify-content: space-between;
   }
   .brand-logo {
     height: 2rem;
