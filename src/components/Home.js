@@ -121,9 +121,21 @@ const Home = () => {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClose}>Home</MenuItem>
-              <MenuItem onClick={handleClose}>Login</MenuItem>
-              <MenuItem onClick={handleClose}>Sign Up</MenuItem>
+              <MenuItem onClick={handleClose}> <Link to={"/"} className="link-tag">
+                <li className="nav-link" id="home-link">
+                  Home
+                </li>
+              </Link></MenuItem>
+              <MenuItem onClick={handleClose}><Link to={"/login"} className="link-tag">
+                <li className="nav-link" id="login-link">
+                  Login
+                </li>
+              </Link></MenuItem>
+              <MenuItem onClick={handleClose}><Link to={"/signup"} className="link-tag">
+                <li className="nav-link" id="signup-link">
+                  Sign Up
+                </li>
+              </Link></MenuItem>
             </Menu>
           </div>
           <div className="nav-links">
